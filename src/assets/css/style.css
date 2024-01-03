@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 *{
     margin: 0;
+    padding: 0
+    ;
 }
 
 body
@@ -15,24 +16,130 @@ h1{
     font-size: 44px;
 }
 
-#main
+.action-button{
+
+    font-size: 20px;
+    margin: 10px auto;
+    padding: 10px 20px;
+    border: 4px dashed #365486;
+    border-radius: 6px;
+    background-color: #DCF2F1;
+    font-weight: 600;
+}
+
+.container
 {
     width: fit-content;
-    min-width: 300px;
     margin: auto;
     text-align: center;
     border-radius: 6px;
-    margin-top: 100px;
+    margin-top: 70px;
     box-shadow: 2px 2px 6px #807d7d;
-    padding: 25px;
+    padding: 10px 15px;
 }
- #main ul{
-    list-style: square;
-    text-align: left;
- }
 
-p{
-    max-width: 350px;
-    text-align: center;
-    font-weight: 300;
+.data {
+
+    width: 90%;
+    border-radius: 6px;
+    box-shadow: none;
+    padding: 0;
+}
+
+#fetched {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: flex-start;
+}
+
+.user-data {
+    width: calc(100%/5);
+    aspect-ratio: 4/3;
+    flex-shrink: 0;
+    margin:0px 5px 50px 5px;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 10px;
+    border-left: 0;
+    border-style: solid;
+    border-color: hsl(218, 43%, 37%);
+    border-radius: 9px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.user-data h2 {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.user-data hr {
+    
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    height: 0;
+    border: 2px dashed #010101;
+    border-radius: 8px;
+}
+
+.display-table {
+
+    display: flex;
+    flex-direction: row;
+}
+
+.display-column {
+    height: 90%;
+    /* width: calc(100%/3); */
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+@media (max-width: 1024px) {
+
+    #fetched {
+        width: 100%;
+    }
+
+    .user-data {
+        width: calc(100%/4);
+    }
+    
+}
+
+@media (max-width: 768px) {
+
+
+    
+}
+
+@media (max-width: 425px) {
+    .data {
+        width: 100%;
+        padding: 0;
+    }
+    
+    #fetched {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .user-data {
+        width: 80%;
+        margin: 10px auto;
+    }
+
+}
+
+@media (max-width: 375px) {
+
+    .user-data {
+        width: 90%;
+    }
+
 }

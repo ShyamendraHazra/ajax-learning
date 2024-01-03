@@ -5,15 +5,14 @@ services:
     build:
       context: .
       target: php_apache
-      args:
-        BUILD_DATE: ${BUILD_DATE:-$(date -u +"%Y-%m-%dT%H:%M:%SZ")}
     image: php-apache
-    env_file:
-      - php.env
     container_name: php-apache
     volumes:
       - ./src:/var/www/html
       - ./logs/php-apache:/var/log/apache2
+    privileged: true
+    env_file:
+      - php.env
     ports: 
       - 8000:80
   
@@ -21,8 +20,6 @@ services:
     build:
       context: .
       target: mysql
-      args:
-        BUILD_DATE: ${BUILD_DATE:-$(date -u +"%Y-%m-%dT%H:%M:%SZ")}
     image: mysql
     env_file:
       - mysql.env
@@ -30,7 +27,7 @@ services:
     volumes:
       - ./mysql/data:/var/lib/mysql
       - ./logs/mysql:/var/log/mysql
-    restart: always
+    restart: on-failure
 
   adminer:
     build:
@@ -39,7 +36,5 @@ services:
     image: adminer
     container_name: adminer
     ports:
-      - 8080:8080
-    volumes:
-      - ./logs/adminer:/var/log/apache2
-    restart: always
+      - 3000:8080
+    restart: on-failure

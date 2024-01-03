@@ -1,8 +1,3 @@
-<?php
-
-    $dbConnStatus=include('inc/config.php');
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,8 +21,6 @@
             <li>Font Style : Poppins</li>
             <li>CSS Path : /assets/css/style.css</li>
             <li>JS Path : /assets/js/scripts.js</li>
-            <li>Database : MySQL</li>
-            <li>Connection Status : <?php echo $dbConnStatus; ?></li>
         </ul>
     </div>
 </body>

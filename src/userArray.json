@@ -1,0 +1,32 @@
+[
+    {
+        "user": "User01",
+        "name": "Aritra Chakraboarty",
+        "date": "03-01-24" 
+    },
+    {
+        "user": "User02",
+        "name": "Arya Sarkar",
+        "date": "03-01-24" 
+    },
+    {
+        "user": "User03",
+        "name": "Ankit Roy",
+        "date": "03-01-24" 
+    },
+    {
+        "user": "User04",
+        "name": "Anupunja Dashgupta",
+        "date": "03-01-24" 
+    },
+    {
+        "user": "User05",
+        "name": "Sukanta Bala",
+        "date": "03-01-24" 
+    },
+    {
+        "user": "User06",
+        "name": "Shyamendra Hazra",
+        "date": "03-01-24" 
+    }
+]
