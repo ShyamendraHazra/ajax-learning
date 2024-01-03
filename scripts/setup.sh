@@ -15,3 +15,6 @@ MYSQL_PASSWORD=Kishori@9
 MYSQL_DATABASE=$databaseName
 MYSQL_ALLOW_EMPTY_PASSWORD=1
 TZ=Asia/Kolkata" > mysql.env;
+
+echo "ADMINER_DEFAULT_SERVER=mysql
+ADMINER_DESIGN=hydra" > adminer.env

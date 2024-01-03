@@ -35,6 +35,8 @@ services:
       target: adminer
     image: adminer
     container_name: adminer
+    env_file:
+      - adminer.env
     ports:
       - 3000:8080
     restart: on-failure
